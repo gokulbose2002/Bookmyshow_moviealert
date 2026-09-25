@@ -1,7 +1,9 @@
 name: spidey-ticket-watch
 
 on:
-  workflow_dispatch: {}   # manual trigger button, also hit remotely by cron-job.org
+  workflow_dispatch: {}
+  schedule:
+    - cron: "*/5 * * * *"   # manual trigger button, also hit remotely by cron-job.org
 
 permissions:
   contents: write
